@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { createElement, useEffect, useState } from 'react'
 import styles from '../../public/css/wallet.module.css'
 import SSC from 'sscjs'
 
@@ -13,6 +13,7 @@ const WalletContent = () => {
 
         // Use the stream method to fetch data
         ssc.find('tokens', 'balances', { account: 'rhiaji' }, 1000, 0, [], (err, result) => {
+            const div = document.getElementById('balances')
             if (err) {
                 console.error('Error fetching data:', err)
             } else {
@@ -35,14 +36,24 @@ const WalletContent = () => {
             <div className={styles.head}>Hive Wallet</div>
             {/* Render or use the steemEngineData in your component */}
             {Data && (
-                <div>
+                <div id="balances">
                     {/* Display the fetched data here */}
-                    {Data.map((balances) => (
-                        <div key={balances._id}>
-                            <p>Symbol: {balances.symbol}</p>
-                            <p>Balance: {balances.balance}</p>
-                        </div>
-                    ))}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {Data.map((balances) => (
+                                <tr key={balances._id}>
+                                    <td>{balances.symbol}</td>
+                                    <td>{balances.balance}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             )}
         </div>
