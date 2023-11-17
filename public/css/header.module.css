@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 75px;
+    background-color: #242526;
+    border-bottom: 2px solid #393a3b;
+}
+
+.main button {
+    font: inherit;
+    font-size: 16px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+.main button:hover {
+    cursor: pointer;
+}
+
+.main img {
+    width: 200px;
+    height: 30px;
+}
