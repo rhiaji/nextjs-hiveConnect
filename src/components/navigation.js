@@ -39,10 +39,10 @@ const navigation = () => {
                         <a href="/create">Create</a>
                     </li>
                     <li>
-                        <a href="">Transactions</a>
+                        <a href="/transactions">Transactions</a>
                     </li>
                     <li>
-                        <a href="">Hive Wallet</a>
+                        <a href="/wallet">Hive Wallet</a>
                     </li>
                 </ul>
             </nav>

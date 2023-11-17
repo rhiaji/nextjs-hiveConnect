@@ -17,26 +17,26 @@ const CustomContent = () => {
                 <div className={custom.json}>
                     <div className={custom.center}>
                         <div className={custom.input}>
-                            <label>Sender:</label>
+                            <label>Token Name:</label>
                             <input type="text" id="sender" placeholder="Input Sender Here...."></input>
                         </div>
                         <div className={custom.input}>
-                            <label>Receiver:</label>
+                            <label>Token Symbol:</label>
                             <input type="text" id="receiver" placeholder="Input Receiver Here...."></input>
                         </div>
 
                         <div className={custom.input}>
-                            <label>Quantity:</label>
+                            <label>Decimal Precision:</label>
                             <input type="number" id="quantity" placeholder="Input Quantity Here...."></input>
                         </div>
 
                         <div className={custom.input}>
-                            <label>Token Name:</label>
+                            <label>Max Supply:</label>
                             <input type="text" id="token" placeholder="Input Token Name Here...."></input>
                         </div>
 
                         <div className={custom.input}>
-                            <label>Memo:</label>
+                            <label>URL:</label>
                             <input type="text" id="memo" placeholder="Input Memo Here...."></input>
                         </div>
                         <div className={custom.input}>
